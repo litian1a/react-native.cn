@@ -196,13 +196,13 @@ class MyList extends React.PureComponent {
             class="propType"><code>?(info: {distanceFromEnd: number}) =&gt; void</code></span> <a class="hash-link"
                                                                                                   href="#onendreached">#</a>
     	</h4>
-        <div><p>当列表被滚动到距离内容最底部不足<code>onEndReachedThreshold</code>的距离时调用。</p></div>
+        <div><p>当列表被滚动到距离内容最底部不足<code>onEndReachedThreshold</code>的距离时调用(始终只会调用一次)。</p></div>
     </div>
 	<div class="prop">
 		<h4 class="propTitle"><a class="anchor" name="onendreachedthreshold"></a>onEndReachedThreshold?: <span class="propType"><span>?number</span></span> <a class="hash-link" href="#onendreachedthreshold">#</a></h4>
 		<div>
 			<p>
-			决定当距离内容最底部还有多远时触发<code>onEndReached</code>回调。注意此参数是一个比值而非像素单位。比如，0.5表示距离内容最底部的距离为当前列表可见长度的一半时触发。
+			决定当距离内容最底部还有多远时触发<code>onEndReached</code>回调。注意此参数是一个比值而非像素单位。比如，0.5表示距离内容最底部的距离为当前列表可见长度的一半时触发(设置大于1时则会立即调用,不需要滑动。建议取值0-1之间)。
 			</p>
 		</div>
 	</div>
